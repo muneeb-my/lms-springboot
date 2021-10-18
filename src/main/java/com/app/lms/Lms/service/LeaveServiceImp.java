@@ -52,9 +52,9 @@ public class LeaveServiceImp implements LeaveService {
 	}
 
 	@Override
-	public ResponseEntity<List<LeaveModel>> getAllLeavesResponse() {
+	public ResponseEntity<List<LeaveModel>> getAllLeavesResponse(String id) {
 
-		List<LeaveModel> allLeaves = leaveRepository.findAll();
+		List<LeaveModel> allLeaves = leaveRepository.findByuserID(id);
 
 		return new ResponseEntity<List<LeaveModel>>(allLeaves, HttpStatus.OK);
 

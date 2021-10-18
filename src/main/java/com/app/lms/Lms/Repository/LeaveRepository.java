@@ -1,5 +1,6 @@
 package com.app.lms.Lms.Repository;
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.transaction.Transactional;
@@ -14,4 +15,6 @@ import com.app.lms.Lms.model.signUpModel;
 public interface LeaveRepository extends JpaRepository<LeaveModel, UUID> {
 
 	LeaveModel findByLeaveID(UUID id);
+	
+	List<LeaveModel> findByuserID(String userID);
 }

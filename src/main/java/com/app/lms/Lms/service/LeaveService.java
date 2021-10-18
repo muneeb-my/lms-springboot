@@ -13,7 +13,7 @@ public interface LeaveService {
 
 	public ResponseEntity<LeaveModel> newLeave(LeaveModel RequestBody, HttpServletRequest request);
 
-    public ResponseEntity<List<LeaveModel>> getAllLeavesResponse();
+    public ResponseEntity<List<LeaveModel>> getAllLeavesResponse(String userID);
     
     public ResponseEntity<LeaveModel> deleteLeavesResponse(UUID id);
     

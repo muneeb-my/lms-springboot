@@ -33,9 +33,9 @@ public class LeaveController {
 	}
 
 	// List All Leaves
-	@RequestMapping(value = "leave", method = RequestMethod.GET)
-	public ResponseEntity<List<LeaveModel>> getAllLeaves() throws Throwable {
-		return LeaveService.getAllLeavesResponse();
+	@RequestMapping(value = "leave/{id}", method = RequestMethod.GET)
+	public ResponseEntity<List<LeaveModel>> getAllLeaves(@PathVariable String id) throws Throwable {
+		return LeaveService.getAllLeavesResponse(id);
 	}
 
 	// Delete Leave
